@@ -11,7 +11,7 @@ public class DataHandler {
 
 	List<DataSource> sources;
 	List<DataReciever> recievers;
-	Map<Integer, ArrayList<DataReciever>> typemap;
+	Map<String, ArrayList<DataReciever>> typemap;
 	Set<String> availabletypes;
 	
 	public DataHandler() {
@@ -49,7 +49,7 @@ public class DataHandler {
 	
 	public void pushData(String type, Object data) {
 		for (DataReciever rec : typemap.get(type)) {
-			//System.out.println("DH: sent data");
+				//System.out.println("DH: sent data");
 			rec.recieveData(type, data);
 		}
 	}
