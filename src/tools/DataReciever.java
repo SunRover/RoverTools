@@ -6,8 +6,8 @@ import java.util.Map;
 
 public interface DataReciever {
 	
-	public int[] getDataTypes();
+	public String[] getDataTypes();
 	
-	public void recieveData(int type, Object data);
+	public void recieveData(String type, Object data);
 
 }

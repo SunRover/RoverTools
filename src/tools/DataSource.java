@@ -6,6 +6,6 @@ package tools;
 
 public interface DataSource {
 	
-	int[] getOfferedDataTypes();
+	String[] getOfferedDataTypes();
 
 }
