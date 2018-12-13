@@ -48,8 +48,12 @@ public class DataHandler {
 	}
 	
 	public void pushData(String type, Object data) {
-		for (DataReciever rec : typemap.get(type)) {
-				//System.out.println("DH: sent data");
+		ArrayList<DataReciever> recs = typemap.get(type);
+		
+		if (recs == null)
+			return;
+		
+		for (DataReciever rec : recs) {
 			rec.recieveData(type, data);
 		}
 	}
